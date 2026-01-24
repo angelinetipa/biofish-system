@@ -76,3 +76,54 @@ MIT License - see LICENSE file for details
 
 - Built for sustainable bioplastic production research
 - Claymorphism UI design inspired by modern web trends
+
+## Initialize Git and Push to GitHub
+```
+Run these commands in your terminal (from your biofish folder):
+bash
+# Initialize Git repository
+git init
+
+# Add all files
+git add .
+
+# Create first commit
+git commit -m "Initial commit: BIO-FISH Claymorphism UI"
+
+# Add your GitHub repository as remote
+git remote add origin https://github.com/yourusername/biofish-system.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+Note: Replace yourusername with your actual GitHub username!
+```
+
+## Future Updates - How to Push Changes
+```
+Whenever you make changes to your code:
+bash
+# Check what files changed
+git status
+
+# Add all changes
+git add .
+
+# Or add specific files
+git add path/to/file.php
+
+# Commit with a message
+git commit -m "Description of what you changed"
+
+# Push to GitHub
+git push
+
+# See commit history
+git log
+
+# See what changed in files
+git diff
+
+# Pull latest changes from GitHub
+git pull
+```
