@@ -1,0 +1,543 @@
+/**
+ * BIO-FISH Component Styles - CLAYMORPHISM EDITION
+ * Buttons, Badges, Alerts, Forms
+ */
+
+/* ========================================
+   BUTTONS - CLAYMORPHISM
+   ======================================== */
+.btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(145deg, #5BA5BA, #3D8899);
+    color: white;
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.2),
+        -8px -8px 16px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.25),
+        -12px -12px 24px rgba(255, 255, 255, 0.4),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:disabled {
+    background: linear-gradient(145deg, #d0d0d0, #b0b0b0);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.1),
+        -6px -6px 12px rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary {
+    background: linear-gradient(145deg, #f0f0f0, #d8d8d8);
+    color: #374151;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.15),
+        -6px -6px 12px rgba(255, 255, 255, 0.7),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.18),
+        -8px -8px 16px rgba(255, 255, 255, 0.8),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 3px 3px 6px rgba(0, 0, 0, 0.15),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+
+/* Machine Control Buttons */
+.control-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pause-btn {
+    background: linear-gradient(145deg, #ffb84d, #ff9800);
+    color: white;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.2),
+        -6px -6px 12px rgba(255, 255, 255, 0.2),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pause-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.25),
+        -8px -8px 16px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.pause-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.continue-btn {
+    background: linear-gradient(145deg, #66bb6a, #4caf50);
+    color: white;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.2),
+        -6px -6px 12px rgba(255, 255, 255, 0.2),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.continue-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.25),
+        -8px -8px 16px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.continue-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.stop-btn {
+    background: linear-gradient(145deg, #ef5350, #f44336);
+    color: white;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.2),
+        -6px -6px 12px rgba(255, 255, 255, 0.2),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stop-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.25),
+        -8px -8px 16px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.stop-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.cleaning-btn {
+    background: linear-gradient(145deg, #42a5f5, #2196f3);
+    color: white;
+    padding: 14px 28px;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.2),
+        -6px -6px 12px rgba(255, 255, 255, 0.2),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cleaning-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.25),
+        -8px -8px 16px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.cleaning-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.cleaning-end-btn {
+    background: linear-gradient(145deg, #66bb6a, #4caf50);
+    color: white;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.2),
+        -6px -6px 12px rgba(255, 255, 255, 0.2),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cleaning-end-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.25),
+        -8px -8px 16px rgba(255, 255, 255, 0.3),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.cleaning-end-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* ========================================
+   STATUS BADGES - CLAYMORPHISM
+   ======================================== */
+.status-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.1),
+        -3px -3px 6px rgba(255, 255, 255, 0.8),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.5),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Batch Statuses */
+.status-running {
+    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+    color: #1565c0;
+}
+
+.status-paused {
+    background: linear-gradient(145deg, #fff3e0, #ffe0b2);
+    color: #e65100;
+}
+
+.status-completed {
+    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+    color: #2e7d32;
+}
+
+.status-stopped {
+    background: linear-gradient(145deg, #ffebee, #ffcdd2);
+    color: #c62828;
+}
+
+.status-cleaning {
+    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+    color: #1565c0;
+}
+
+.status-error {
+    background: linear-gradient(145deg, #ffebee, #ffcdd2);
+    color: #c62828;
+}
+
+/* Material Statuses */
+.status-available {
+    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+    color: #1b5e20;
+}
+
+.status-low_stock {
+    background: linear-gradient(145deg, #fff3e0, #ffe0b2);
+    color: #e65100;
+}
+
+.status-depleted {
+    background: linear-gradient(145deg, #ffebee, #ffcdd2);
+    color: #b71c1c;
+}
+
+/* Feedback Type Badges */
+.feedback-type-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    box-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.1),
+        -2px -2px 4px rgba(255, 255, 255, 0.8),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.5),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-type-comment {
+    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+    color: #1565c0;
+}
+
+.feedback-type-bug {
+    background: linear-gradient(145deg, #ffebee, #ffcdd2);
+    color: #c62828;
+}
+
+.feedback-type-feature {
+    background: linear-gradient(145deg, #f3e5f5, #e1bee7);
+    color: #6a1b9a;
+}
+
+/* ========================================
+   ALERTS - CLAYMORPHISM
+   ======================================== */
+.alert {
+    padding: 18px 24px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.1),
+        -6px -6px 12px rgba(255, 255, 255, 0.5),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+        inset -2px -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.alert-success {
+    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+    color: #1b5e20;
+}
+
+.alert-error {
+    background: linear-gradient(145deg, #ffebee, #ffcdd2);
+    color: #b71c1c;
+}
+
+.alert-warning {
+    background: linear-gradient(145deg, #fff3e0, #ffe0b2);
+    color: #e65100;
+}
+
+.alert-info {
+    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+    color: #1565c0;
+}
+
+/* ========================================
+   FORMS - CLAYMORPHISM
+   ======================================== */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    color: #374151;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+label .required {
+    color: #f44336;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #1f2937;
+    box-shadow: 
+        inset 4px 4px 8px rgba(0, 0, 0, 0.08),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    background: #ffffff;
+    box-shadow: 
+        inset 3px 3px 6px rgba(74, 144, 164, 0.15),
+        inset -3px -3px 6px rgba(255, 255, 255, 1),
+        0 0 0 3px rgba(74, 144, 164, 0.1);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    background: #e9ecef;
+    cursor: not-allowed;
+    color: #6c757d;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+}
+
+.help-text {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* Form Cards */
+.form-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.12),
+        -12px -12px 24px rgba(255, 255, 255, 0.7),
+        inset 2px 2px 6px rgba(255, 255, 255, 0.9),
+        inset -2px -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================
+   LOADING SPINNER - CLAYMORPHISM
+   ======================================== */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #5BA5BA, #3D8899);
+    position: relative;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.2),
+        -6px -6px 12px rgba(255, 255, 255, 0.5);
+}
+
+.spinner::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: #f5f7fa;
+    border-radius: 50%;
+    box-shadow: 
+        inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.spinner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(145deg, #5BA5BA, #3D8899);
+    border-radius: 50px 0 0 50px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

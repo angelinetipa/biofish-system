@@ -1,0 +1,41 @@
+# Create a file named `.gitignore` in your `biofish` root folder with this content:
+```
+# Database configuration
+config/database.php
+
+# Environment files
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+cache/
+
+# Uploads (if you have user uploads)
+uploads/*
+!uploads/.gitkeep
+
+# Vendor/Dependencies (if using Composer)
+vendor/
+
+# Database backups
+*.sql
+*.db
+*.sqlite
