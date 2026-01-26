@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/components.css">
     <style>
         body {
-            overflow: hidden; /* Prevent scrolling */
+            overflow: hidden;
         }
         
         .login-wrapper {
@@ -47,10 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         .login-container {
             background: rgba(255, 255, 255, 0.95);
-            padding: 40px 45px;
-            border-radius: 40px;
+            padding: 28px 32px;
+            border-radius: 28px;
             width: 100%;
-            max-width: 450px;
+            max-width: 360px;
             position: relative;
             z-index: 1;
             box-shadow: 
@@ -58,19 +58,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 -20px -20px 60px rgba(255, 255, 255, 0.7),
                 inset 2px 2px 8px rgba(255, 255, 255, 0.9),
                 inset -2px -2px 8px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
         }
         
         .logo-section {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         .logo-clay {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 15px;
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 12px;
             background: linear-gradient(145deg, #5BA5BA, #3D8899);
-            border-radius: 22px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -79,11 +80,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 -12px -12px 24px rgba(255, 255, 255, 0.5),
                 inset 4px 4px 8px rgba(255, 255, 255, 0.3),
                 inset -4px -4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 28px;
         }
         
         .logo-clay:hover {
-            transform: translateY(-3px);
+            transform: translateY(-3px) scale(1.02);
             box-shadow: 
                 16px 16px 32px rgba(0, 0, 0, 0.25),
                 -16px -16px 32px rgba(255, 255, 255, 0.6),
@@ -91,57 +93,175 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 inset -4px -4px 8px rgba(0, 0, 0, 0.15);
         }
         
-        /* SVG Icon styling */
-        .logo-clay svg {
-            width: 40px;
-            height: 40px;
-            fill: white;
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
-        }
-        
         .logo-section h1 {
-            font-size: 28px;
+            font-size: 20px;
             color: #2C7873;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             font-weight: 800;
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.5px;
         }
         
         .logo-section p {
             color: #5a6c7d;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+        
+        .alert {
+            padding: 10px 14px;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .alert-error {
+            background: linear-gradient(145deg, #fee, #fdd);
+            color: #c33;
+            border: 1px solid #fcc;
+            box-shadow: 
+                4px 4px 12px rgba(204, 51, 51, 0.1),
+                inset 1px 1px 3px rgba(255, 255, 255, 0.5);
+        }
+        
+        .alert svg {
+            flex-shrink: 0;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #374151;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.3px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #e5e7eb;
+            border-radius: 14px;
+            font-size: 13px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+            box-shadow: 
+                inset 2px 2px 5px rgba(0, 0, 0, 0.03),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #5BA5BA;
+            box-shadow: 
+                0 0 0 4px rgba(91, 165, 186, 0.1),
+                inset 2px 2px 5px rgba(91, 165, 186, 0.05);
+            transform: translateY(-1px);
+        }
+        
+        .form-group input::placeholder {
+            color: #9ca3af;
+            font-size: 12px;
+        }
+        
+        .btn {
+            padding: 11px 20px;
+            border: none;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            letter-spacing: 0.3px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(145deg, #5BA5BA, #3D8899);
+            color: white;
+            box-shadow: 
+                8px 8px 16px rgba(0, 0, 0, 0.15),
+                -8px -8px 16px rgba(255, 255, 255, 0.5),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                10px 10px 20px rgba(0, 0, 0, 0.2),
+                -10px -10px 20px rgba(255, 255, 255, 0.6),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 
+                4px 4px 8px rgba(0, 0, 0, 0.2),
+                inset 2px 2px 6px rgba(0, 0, 0, 0.1);
         }
         
         .demo-clay-card {
-            margin-top: 20px;
-            padding: 18px;
-            background: #e8f4f8;
-            border-radius: 20px;
+            margin-top: 18px;
+            padding: 14px;
+            background: linear-gradient(145deg, #e8f4f8, #d8eef5);
+            border-radius: 18px;
             box-shadow: 
                 inset 4px 4px 12px rgba(0, 0, 0, 0.08),
                 inset -4px -4px 12px rgba(255, 255, 255, 0.9);
         }
         
         .demo-clay-card h3 {
-            font-size: 11px;
+            font-size: 10px;
             color: #2C7873;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
         
         .demo-clay-card h3 svg {
-            width: 14px;
-            height: 14px;
+            width: 13px;
+            height: 13px;
             fill: #2C7873;
         }
         
@@ -149,13 +269,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 10px;
-            padding: 10px 14px;
-            background: white;
+            margin-bottom: 8px;
+            padding: 9px 12px;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
             box-shadow: 
                 4px 4px 8px rgba(0, 0, 0, 0.06),
                 -4px -4px 8px rgba(255, 255, 255, 0.8);
+            transition: all 0.2s ease;
+        }
+        
+        .credential-item:hover {
+            transform: translateX(2px);
+            box-shadow: 
+                6px 6px 12px rgba(0, 0, 0, 0.08),
+                -6px -6px 12px rgba(255, 255, 255, 0.9);
         }
         
         .credential-item:last-child {
@@ -163,18 +291,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         .cred-label {
-            font-size: 12px;
+            font-size: 11px;
             color: #6b7280;
             font-weight: 600;
+            letter-spacing: 0.2px;
         }
         
         .cred-value {
             font-family: 'Courier New', monospace;
-            font-size: 12px;
+            font-size: 11px;
             color: #2C7873;
             font-weight: 700;
-            background: #f0f9ff;
-            padding: 5px 10px;
+            background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
+            padding: 4px 9px;
             border-radius: 8px;
             box-shadow: 
                 inset 2px 2px 4px rgba(0, 0, 0, 0.06),
@@ -184,21 +313,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         /* Responsive adjustments */
         @media (max-height: 700px) {
             .login-container {
-                padding: 30px 35px;
+                padding: 24px 28px;
+                max-width: 340px;
             }
             .logo-clay {
-                width: 60px;
-                height: 60px;
-            }
-            .logo-clay svg {
-                width: 32px;
-                height: 32px;
+                width: 48px;
+                height: 48px;
+                font-size: 26px;
             }
             .logo-section h1 {
-                font-size: 24px;
+                font-size: 18px;
             }
             .form-group {
-                margin-bottom: 16px;
+                margin-bottom: 14px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .login-container {
+                max-width: 320px;
+                padding: 24px;
             }
         }
     </style>
@@ -207,12 +341,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="login-wrapper">
         <div class="login-container">
             <div class="logo-section">
-                <div class="logo-clay">
-                    <!-- Fish/Wave Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12,20L15.46,14H8.54M8.41,13H15.59C17.77,13 19.75,12.34 21.16,11.32C19.75,10.3 17.77,9.64 15.59,9.64H14.57L16.35,6.5C14.76,5.5 11.54,4.91 9.63,6C10.07,6.89 10.53,7.77 11,8.66V9.64H8.41C6.23,9.64 4.25,10.3 2.84,11.32C4.25,12.34 6.23,13 8.41,13M15.59,10.59C17.34,10.59 19,10.97 20.4,11.66C19,12.35 17.34,12.73 15.59,12.73H12.1L13.88,9.59C14.5,9.95 15.1,10.23 15.59,10.59Z"/>
-                    </svg>
-                </div>
+                <div class="logo-clay">🐟</div>
                 <h1><?php echo APP_NAME; ?></h1>
                 <p><?php echo APP_DESCRIPTION; ?></p>
             </div>
@@ -237,7 +366,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="password" id="password" name="password" required placeholder="Enter your password">
                 </div>
                 
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+                <button type="submit" class="btn btn-primary">Sign In</button>
             </form>
             
             <div class="demo-clay-card">
