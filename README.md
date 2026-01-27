@@ -126,4 +126,17 @@ git diff
 
 # Pull latest changes from GitHub
 git pull
+
+# Throw away your local changes & go back to recent git push
+git fetch origin
+git reset --hard origin/main
+
+## Exporting Database
+# mkdir database Create database folder
+
+# Export database structure (without data)
+mysqldump -u root -p --no-data biofish_db > database/schema.sql
+
+# Or export with sample data
+mysqldump -u root -p biofish_db > database/biofish_sample.sql
 ```
