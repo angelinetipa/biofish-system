@@ -59,10 +59,15 @@ body.auth-page::after {
     content: '';
     position: absolute;
     top: 0;
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 5%;
     height: 3px;
-    background: var(--gradient-button);
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--primary-teal), 
+        var(--primary-ocean), 
+        var(--primary-teal), 
+        transparent);
     border-radius: var(--radius-full);
     opacity: 0.7;
 }
