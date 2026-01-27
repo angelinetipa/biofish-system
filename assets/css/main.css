@@ -601,7 +601,7 @@ tr:last-child td:last-child {
 }
 
 .table-scroll-container {
-    max-height: 400px;
+    max-height: 350px;
     overflow-y: auto;
     border-radius: 18px;
     margin-top: 12px;

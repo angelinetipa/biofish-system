@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             if ($stmt->execute()) {
                 log_activity('material_added', "Fish scale material added: $fish_scale_type, $quantity_kg kg");
-                set_flash('success', '✓ Fish scale material added successfully to inventory!');
+                set_flash('success', 'Fish scale material added successfully to inventory!');
                 redirect(BASE_URL . '/pages/dashboard/index.php');
             } else {
                 $error = "Error adding material: " . $conn->error;
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Update existing additive stock
                 if (update_additive_stock($result->fetch_assoc()['additive_id'], $quantity_ml)) {
                     log_activity('additive_restocked', "Additive restocked: $additive_name, +$quantity_ml mL");
-                    set_flash('success', "✓ Additive stock updated successfully! Added $quantity_ml mL to existing stock.");
+                    set_flash('success', "Additive stock updated successfully! Added $quantity_ml mL to existing stock.");
                     redirect(BASE_URL . '/pages/dashboard/index.php');
                 } else {
                     $error = "Error updating additive: " . $conn->error;
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 
                 if ($stmt->execute()) {
                     log_activity('additive_added', "New additive added: $additive_name, $quantity_ml mL");
-                    set_flash('success', '✓ New additive added successfully to inventory!');
+                    set_flash('success', 'New additive added successfully to inventory!');
                     redirect(BASE_URL . '/pages/dashboard/index.php');
                 } else {
                     $error = "Error adding additive: " . $conn->error;
