@@ -12,8 +12,6 @@
             <div class="user-name"><?php echo get_user_name(); ?></div>
             <div class="user-role"><?php echo ucfirst(get_user_role()); ?></div>
         </div>
-        <a href="<?php echo BASE_URL; ?>/pages/auth/logout.php">
-            <button class="logout-btn">Logout</button>
-        </a>
+        <button class="logout-btn" onclick="showLogoutModal()">Logout</button>
     </div>
 </div>

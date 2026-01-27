@@ -142,6 +142,7 @@
     border-radius: var(--radius-md);
     margin-bottom: 10px;
     transition: var(--transition-normal);
+    flex-wrap: nowrap;
     box-shadow: 
         2px 2px 6px rgba(44, 107, 127, 0.06),
         -2px -2px 6px rgba(255, 255, 255, 0.8);
@@ -185,7 +186,10 @@
 }
 
 .quantity-input {
-    width: 150px;
+    width: 140px;
+    min-width: 140px;
+    max-width: 140px;
+    flex-shrink: 0;  /* Add this */
     padding: var(--space-sm) 12px;
     border: 1px solid var(--neutral-cloud);
     border-radius: var(--radius-sm);

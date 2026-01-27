@@ -114,6 +114,8 @@ $page_title = 'Add Inventory Item';
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/main.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/components.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/page-specific.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/logout-modal.css">
+    <script src="<?php echo JS_URL; ?>/logout-modal.js"></script>
 </head>
 <body>
     <?php include ROOT_PATH . '/includes/header.php'; ?>

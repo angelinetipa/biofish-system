@@ -23,6 +23,8 @@ if (!isset($page_content)) die('Error: $page_content not set');
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/main.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/components.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/page-specific.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/logout-modal.css">
+    <script src="<?php echo JS_URL; ?>/logout-modal.js"></script>
     <?php if (isset($extra_css)): ?>
         <?php foreach ($extra_css as $css): ?>
             <link rel="stylesheet" href="<?php echo $css; ?>">
