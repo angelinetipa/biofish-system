@@ -1,23 +1,3 @@
-<style>
-.btn-icon {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-.btn-icon svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-}
-.idle-icon svg,
-.cleaning-icon svg {
-    width: 48px;
-    height: 48px;
-    opacity: 0.5;
-    fill: #999;
-}
-</style>
-
 <!-- Tab 1: Process Monitoring -->
 <div id="monitoring" class="tab-content active">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">

@@ -1,10 +1,3 @@
-<style>
-.metric-icon svg,
-.machine-status-card svg {
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
-}
-</style>
-
 <!-- Key Metrics - CLAYMORPHISM LAYOUT -->
 <div class="metrics-container">
     <!-- LARGE MACHINE STATUS CARD (Left Side) -->
