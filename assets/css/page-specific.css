@@ -91,16 +91,45 @@
 
 .star-rating label {
     cursor: pointer;
-    color: var(--neutral-cloud);
-    transition: color var(--transition-normal);
+    color: #E0E0E0;  /* Lighter gray for unselected */
+    transition: all 0.2s ease;
     margin: 0;
 }
 
-.star-rating label:hover,
-.star-rating label:hover ~ label,
 .star-rating input[type="radio"]:checked ~ label {
-    color: var(--accent-sand);
-    filter: drop-shadow(0 2px 4px rgba(255, 230, 109, 0.4));
+    color: #FFB300;  /* Brighter gold */
+    filter: drop-shadow(0 2px 6px rgba(255, 179, 0, 0.6));
+    transform: scale(1.15);  /* Make clicked star slightly bigger */
+}
+
+.star-rating label {
+    cursor: pointer;
+    color: #E0E0E0;  /* Lighter gray for unselected */
+    transition: all 0.2s ease;
+    margin: 0;
+}
+
+.star-rating label:hover {
+    color: #FFCA28;  /* Lighter gold on hover */
+    filter: drop-shadow(0 2px 4px rgba(255, 202, 40, 0.5));
+    transform: scale(1.1);
+}
+
+/* Active/selected state - more visible */
+.star-rating input[type="radio"]:checked ~ label {
+    color: #FF9800;  /* Orange-gold for selected */
+    filter: drop-shadow(0 3px 8px rgba(255, 152, 0, 0.7));
+    transform: scale(1.2);
+    animation: starPop 0.3s ease;
+}
+
+@keyframes starPop {
+    0%, 100% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.3);
+    }
 }
 
 .feedback-sections {
