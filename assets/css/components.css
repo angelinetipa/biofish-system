@@ -483,6 +483,8 @@ textarea::placeholder {
     backdrop-filter: blur(8px);
     padding: var(--space-xl);
     border-radius: var(--radius-xl);
+    max-width: 900px;  /* Add this */
+    margin: 0 auto;    /* Add this */
     box-shadow: 
         8px 8px 18px rgba(44, 107, 127, 0.12),
         -8px -8px 18px rgba(255, 255, 255, 0.6),
