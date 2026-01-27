@@ -1,11 +1,3 @@
-<style>
-.feedback-icon svg {
-    width: 32px;
-    height: 32px;
-    fill: currentColor;
-}
-</style>
-
 <!-- Tab 3: Feedback -->
 <div id="feedback" class="tab-content">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">

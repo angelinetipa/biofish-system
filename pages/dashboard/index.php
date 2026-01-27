@@ -29,19 +29,11 @@ $running_batch = get_running_batch();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo get_page_title('Dashboard'); ?></title>
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/auth.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/variables.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/main.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/components.css">
-    <style>
-        /* Icon styling for tabs */
-        .tab-btn svg {
-            width: 18px;
-            height: 18px;
-            vertical-align: middle;
-            margin-right: 6px;
-            margin-top: -2px;
-            fill: currentColor;
-        }
-    </style>
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/page-specific.css">
 </head>
 <body>
     <?php include ROOT_PATH . '/includes/header.php'; ?>

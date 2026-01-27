@@ -148,8 +148,11 @@ $page_title = 'Start New Batch';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo get_page_title($page_title); ?></title>
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/auth.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/variables.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/main.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/components.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/page-specific.css">
 </head>
 <body>
     <?php include ROOT_PATH . '/includes/header.php'; ?>

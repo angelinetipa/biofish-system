@@ -18,8 +18,11 @@ if (!isset($page_content)) die('Error: $page_content not set');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo get_page_title($page_title); ?></title>
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/auth.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/variables.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/main.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/components.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/page-specific.css">
     <?php if (isset($extra_css)): ?>
         <?php foreach ($extra_css as $css): ?>
             <link rel="stylesheet" href="<?php echo $css; ?>">

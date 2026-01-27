@@ -1,322 +1,340 @@
 /**
- * BIO-FISH Component Styles - CLAYMORPHISM EDITION
+ * BIO-FISH Component Styles - REFINED OCEAN CLAYMORPHISM
  * Buttons, Badges, Alerts, Forms
  */
 
 /* ========================================
-   BUTTONS - CLAYMORPHISM
+   BUTTONS - OCEAN CLAYMORPHISM
    ======================================== */
 .btn {
-    padding: 14px 30px;
+    padding: 11px 24px;
     border: none;
-    border-radius: 16px;
-    font-size: 16px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
     text-decoration: none;
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .btn-primary {
-    background: linear-gradient(145deg, #5BA5BA, #3D8899);
-    color: white;
+    background: var(--gradient-button);
+    color: var(--neutral-white);
     box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.2),
-        -8px -8px 16px rgba(255, 255, 255, 0.3),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+        6px 6px 14px rgba(44, 107, 127, 0.25),
+        -6px -6px 14px rgba(255, 255, 255, 0.3),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 3px rgba(44, 107, 127, 0.2);
 }
 
 .btn-primary:hover:not(:disabled) {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 
-        12px 12px 24px rgba(0, 0, 0, 0.25),
-        -12px -12px 24px rgba(255, 255, 255, 0.4),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+        8px 8px 18px rgba(44, 107, 127, 0.3),
+        -8px -8px 18px rgba(255, 255, 255, 0.4),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 3px rgba(44, 107, 127, 0.15);
 }
 
 .btn-primary:active:not(:disabled) {
     transform: translateY(0);
     box-shadow: 
-        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+        inset 4px 4px 10px rgba(44, 107, 127, 0.25),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .btn-primary:disabled {
-    background: linear-gradient(145deg, #d0d0d0, #b0b0b0);
+    background: var(--gradient-pearl);
+    color: var(--neutral-slate);
     cursor: not-allowed;
     transform: none;
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.1),
-        -6px -6px 12px rgba(255, 255, 255, 0.5);
+        4px 4px 10px rgba(0, 0, 0, 0.08),
+        -4px -4px 10px rgba(255, 255, 255, 0.5);
 }
 
 .btn-secondary {
-    background: linear-gradient(145deg, #f0f0f0, #d8d8d8);
-    color: #374151;
+    background: var(--gradient-pearl);
+    color: var(--neutral-charcoal);
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.15),
-        -6px -6px 12px rgba(255, 255, 255, 0.7),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.5),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+        5px 5px 12px rgba(0, 0, 0, 0.12),
+        -5px -5px 12px rgba(255, 255, 255, 0.7),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.6),
+        inset -1px -1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .btn-secondary:hover {
     transform: translateY(-2px);
+    color: var(--primary-ocean);
     box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.18),
-        -8px -8px 16px rgba(255, 255, 255, 0.8),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.6),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.08);
+        7px 7px 16px rgba(0, 0, 0, 0.15),
+        -7px -7px 16px rgba(255, 255, 255, 0.8),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.7),
+        inset -1px -1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .btn-secondary:active {
     transform: translateY(0);
     box-shadow: 
-        inset 3px 3px 6px rgba(0, 0, 0, 0.15),
-        inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+        inset 3px 3px 8px rgba(0, 0, 0, 0.12),
+        inset -3px -3px 8px rgba(255, 255, 255, 0.7);
 }
 
 /* Machine Control Buttons */
 .control-btn {
-    padding: 12px 24px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 14px;
+    border-radius: var(--radius-md);
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
+    transition: var(--transition-smooth);
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    color: var(--neutral-white);
 }
 
 .pause-btn {
-    background: linear-gradient(145deg, #ffb84d, #ff9800);
-    color: white;
+    background: linear-gradient(145deg, var(--warning), #fb8c00);
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.2),
-        -6px -6px 12px rgba(255, 255, 255, 0.2),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+        5px 5px 12px rgba(255, 152, 0, 0.25),
+        -5px -5px 12px rgba(255, 255, 255, 0.2),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 3px rgba(230, 81, 0, 0.2);
 }
 
 .pause-btn:hover {
     transform: translateY(-2px);
     box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.25),
-        -8px -8px 16px rgba(255, 255, 255, 0.3),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+        7px 7px 16px rgba(255, 152, 0, 0.3),
+        -7px -7px 16px rgba(255, 255, 255, 0.3),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 3px rgba(230, 81, 0, 0.15);
 }
 
 .pause-btn:active {
     transform: translateY(0);
     box-shadow: 
-        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+        inset 4px 4px 10px rgba(230, 81, 0, 0.3),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .continue-btn {
-    background: linear-gradient(145deg, #66bb6a, #4caf50);
-    color: white;
+    background: linear-gradient(145deg, var(--success), #43a047);
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.2),
-        -6px -6px 12px rgba(255, 255, 255, 0.2),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+        5px 5px 12px rgba(76, 175, 80, 0.25),
+        -5px -5px 12px rgba(255, 255, 255, 0.2),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 3px rgba(46, 125, 50, 0.2);
 }
 
 .continue-btn:hover {
     transform: translateY(-2px);
     box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.25),
-        -8px -8px 16px rgba(255, 255, 255, 0.3),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+        7px 7px 16px rgba(76, 175, 80, 0.3),
+        -7px -7px 16px rgba(255, 255, 255, 0.3),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 3px rgba(46, 125, 50, 0.15);
 }
 
 .continue-btn:active {
     transform: translateY(0);
     box-shadow: 
-        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+        inset 4px 4px 10px rgba(46, 125, 50, 0.3),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .stop-btn {
-    background: linear-gradient(145deg, #ef5350, #f44336);
-    color: white;
+    background: linear-gradient(145deg, var(--error), #e53935);
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.2),
-        -6px -6px 12px rgba(255, 255, 255, 0.2),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+        5px 5px 12px rgba(244, 67, 54, 0.25),
+        -5px -5px 12px rgba(255, 255, 255, 0.2),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 3px rgba(198, 40, 40, 0.2);
 }
 
 .stop-btn:hover {
     transform: translateY(-2px);
     box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.25),
-        -8px -8px 16px rgba(255, 255, 255, 0.3),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+        7px 7px 16px rgba(244, 67, 54, 0.3),
+        -7px -7px 16px rgba(255, 255, 255, 0.3),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 3px rgba(198, 40, 40, 0.15);
 }
 
 .stop-btn:active {
     transform: translateY(0);
     box-shadow: 
-        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+        inset 4px 4px 10px rgba(198, 40, 40, 0.3),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .cleaning-btn {
-    background: linear-gradient(145deg, #42a5f5, #2196f3);
-    color: white;
-    padding: 14px 28px;
+    background: linear-gradient(145deg, var(--info), #1e88e5);
+    padding: 11px 24px;
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.2),
-        -6px -6px 12px rgba(255, 255, 255, 0.2),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+        5px 5px 12px rgba(33, 150, 243, 0.25),
+        -5px -5px 12px rgba(255, 255, 255, 0.2),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 3px rgba(21, 101, 192, 0.2);
 }
 
 .cleaning-btn:hover {
     transform: translateY(-2px);
     box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.25),
-        -8px -8px 16px rgba(255, 255, 255, 0.3),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+        7px 7px 16px rgba(33, 150, 243, 0.3),
+        -7px -7px 16px rgba(255, 255, 255, 0.3),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 3px rgba(21, 101, 192, 0.15);
 }
 
 .cleaning-btn:active {
     transform: translateY(0);
     box-shadow: 
-        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+        inset 4px 4px 10px rgba(21, 101, 192, 0.3),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .cleaning-end-btn {
-    background: linear-gradient(145deg, #66bb6a, #4caf50);
-    color: white;
+    background: linear-gradient(145deg, var(--success), #43a047);
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.2),
-        -6px -6px 12px rgba(255, 255, 255, 0.2),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.3),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+        5px 5px 12px rgba(76, 175, 80, 0.25),
+        -5px -5px 12px rgba(255, 255, 255, 0.2),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 3px rgba(46, 125, 50, 0.2);
 }
 
 .cleaning-end-btn:hover {
     transform: translateY(-2px);
     box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.25),
-        -8px -8px 16px rgba(255, 255, 255, 0.3),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.4),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+        7px 7px 16px rgba(76, 175, 80, 0.3),
+        -7px -7px 16px rgba(255, 255, 255, 0.3),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 3px rgba(46, 125, 50, 0.15);
 }
 
 .cleaning-end-btn:active {
     transform: translateY(0);
     box-shadow: 
-        inset 4px 4px 8px rgba(0, 0, 0, 0.25),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+        inset 4px 4px 10px rgba(46, 125, 50, 0.3),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 /* ========================================
-   STATUS BADGES - CLAYMORPHISM
+   STATUS BADGES - OCEAN THEME
    ======================================== */
 .status-badge {
     display: inline-block;
-    padding: 8px 16px;
-    border-radius: 14px;
-    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: var(--radius-md);
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
     box-shadow: 
-        3px 3px 6px rgba(0, 0, 0, 0.1),
-        -3px -3px 6px rgba(255, 255, 255, 0.8),
+        2px 2px 6px rgba(44, 107, 127, 0.1),
+        -2px -2px 6px rgba(255, 255, 255, 0.8),
         inset 1px 1px 2px rgba(255, 255, 255, 0.5),
-        inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+        inset -1px -1px 2px rgba(44, 107, 127, 0.08);
 }
 
 /* Batch Statuses */
 .status-running {
-    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
-    color: #1565c0;
+    background: linear-gradient(145deg, var(--info-light), #b3e5fc);
+    color: var(--info-dark);
 }
 
 .status-paused {
-    background: linear-gradient(145deg, #fff3e0, #ffe0b2);
-    color: #e65100;
+    background: linear-gradient(145deg, var(--warning-light), #ffe082);
+    color: var(--warning-dark);
 }
 
 .status-completed {
-    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
-    color: #2e7d32;
+    background: linear-gradient(145deg, var(--success-light), #c8e6c9);
+    color: var(--success-dark);
 }
 
 .status-stopped {
-    background: linear-gradient(145deg, #ffebee, #ffcdd2);
-    color: #c62828;
+    background: linear-gradient(145deg, var(--error-light), #ffcdd2);
+    color: var(--error-dark);
 }
 
 .status-cleaning {
-    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
-    color: #1565c0;
+    background: linear-gradient(145deg, var(--info-light), #b3e5fc);
+    color: var(--info-dark);
 }
 
 .status-error {
-    background: linear-gradient(145deg, #ffebee, #ffcdd2);
-    color: #c62828;
+    background: linear-gradient(145deg, var(--error-light), #ffcdd2);
+    color: var(--error-dark);
 }
 
 /* Material Statuses */
 .status-available {
-    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
-    color: #1b5e20;
+    background: linear-gradient(145deg, var(--success-light), #c8e6c9);
+    color: var(--success-dark);
 }
 
 .status-low_stock {
-    background: linear-gradient(145deg, #fff3e0, #ffe0b2);
-    color: #e65100;
+    background: linear-gradient(145deg, var(--warning-light), #ffe082);
+    color: var(--warning-dark);
 }
 
 .status-depleted {
-    background: linear-gradient(145deg, #ffebee, #ffcdd2);
-    color: #b71c1c;
+    background: linear-gradient(145deg, var(--error-light), #ffcdd2);
+    color: var(--error-dark);
 }
 
 /* Feedback Type Badges */
 .feedback-type-badge {
     display: inline-block;
-    padding: 6px 12px;
-    border-radius: 12px;
-    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 10px;
     font-weight: 700;
-    margin-right: 5px;
+    margin-right: 4px;
     margin-bottom: 3px;
     text-transform: uppercase;
     letter-spacing: 0.3px;
     box-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.1),
+        2px 2px 4px rgba(44, 107, 127, 0.1),
         -2px -2px 4px rgba(255, 255, 255, 0.8),
         inset 1px 1px 2px rgba(255, 255, 255, 0.5),
-        inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+        inset -1px -1px 2px rgba(44, 107, 127, 0.08);
 }
 
 .feedback-type-comment {
-    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
-    color: #1565c0;
+    background: linear-gradient(145deg, var(--info-light), #b3e5fc);
+    color: var(--info-dark);
 }
 
 .feedback-type-bug {
-    background: linear-gradient(145deg, #ffebee, #ffcdd2);
-    color: #c62828;
+    background: linear-gradient(145deg, var(--error-light), #ffcdd2);
+    color: var(--error-dark);
 }
 
 .feedback-type-feature {
@@ -325,62 +343,71 @@
 }
 
 /* ========================================
-   ALERTS - CLAYMORPHISM
+   ALERTS - OCEAN CLAYMORPHISM
    ======================================== */
 .alert {
-    padding: 18px 24px;
-    border-radius: 18px;
-    margin-bottom: 25px;
+    padding: 14px 20px;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     font-weight: 600;
+    font-size: 13px;
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.1),
-        -6px -6px 12px rgba(255, 255, 255, 0.5),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.5),
-        inset -2px -2px 4px rgba(0, 0, 0, 0.05);
+        4px 4px 10px rgba(44, 107, 127, 0.1),
+        -4px -4px 10px rgba(255, 255, 255, 0.5),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.6),
+        inset -1px -1px 3px rgba(44, 107, 127, 0.04);
+}
+
+.alert svg {
+    flex-shrink: 0;
 }
 
 .alert-success {
-    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
-    color: #1b5e20;
+    background: linear-gradient(145deg, var(--success-light), #c8e6c9);
+    color: var(--success-dark);
+    border-left: 4px solid var(--success);
 }
 
 .alert-error {
-    background: linear-gradient(145deg, #ffebee, #ffcdd2);
-    color: #b71c1c;
+    background: linear-gradient(145deg, var(--error-light), #ffcdd2);
+    color: var(--error-dark);
+    border-left: 4px solid var(--error);
 }
 
 .alert-warning {
-    background: linear-gradient(145deg, #fff3e0, #ffe0b2);
-    color: #e65100;
+    background: linear-gradient(145deg, var(--warning-light), #ffe082);
+    color: var(--warning-dark);
+    border-left: 4px solid var(--warning);
 }
 
 .alert-info {
-    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
-    color: #1565c0;
+    background: linear-gradient(145deg, var(--info-light), #b3e5fc);
+    color: var(--info-dark);
+    border-left: 4px solid var(--info);
 }
 
 /* ========================================
-   FORMS - CLAYMORPHISM
+   FORMS - OCEAN CLAYMORPHISM
    ======================================== */
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: var(--space-md);
 }
 
 label {
     display: block;
-    color: #374151;
-    margin-bottom: 10px;
+    color: var(--neutral-charcoal);
+    margin-bottom: var(--space-sm);
     font-weight: 700;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
 }
 
 label .required {
-    color: #f44336;
+    color: var(--error);
 }
 
 input[type="text"],
@@ -391,96 +418,111 @@ input[type="date"],
 select,
 textarea {
     width: 100%;
-    padding: 14px 18px;
-    border: none;
-    border-radius: 14px;
-    font-size: 15px;
-    font-family: inherit;
+    padding: 11px 16px;
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-family: var(--font-primary);
     font-weight: 500;
-    transition: all 0.3s ease;
-    background: #f8f9fa;
-    color: #1f2937;
+    transition: var(--transition-smooth);
+    background: var(--neutral-snow);
+    color: var(--neutral-charcoal);
     box-shadow: 
-        inset 4px 4px 8px rgba(0, 0, 0, 0.08),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+        inset 2px 2px 6px rgba(44, 107, 127, 0.06),
+        inset -2px -2px 6px rgba(255, 255, 255, 0.9);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    background: #ffffff;
+    background: var(--neutral-white);
+    border-color: var(--primary-teal);
     box-shadow: 
-        inset 3px 3px 6px rgba(74, 144, 164, 0.15),
-        inset -3px -3px 6px rgba(255, 255, 255, 1),
-        0 0 0 3px rgba(74, 144, 164, 0.1);
+        0 0 0 3px rgba(78, 205, 196, 0.1),
+        inset 2px 2px 6px rgba(78, 205, 196, 0.08);
 }
 
 input:disabled,
 select:disabled,
 textarea:disabled {
-    background: #e9ecef;
+    background: var(--neutral-mist);
     cursor: not-allowed;
-    color: #6c757d;
+    color: var(--neutral-slate);
 }
 
 textarea {
-    min-height: 120px;
+    min-height: 100px;
     resize: vertical;
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #9ca3af;
+    color: var(--neutral-slate);
 }
 
 .help-text {
-    font-size: 12px;
-    color: #6b7280;
-    margin-top: 6px;
+    font-size: 11px;
+    color: var(--neutral-steel);
+    margin-top: 5px;
     font-weight: 500;
 }
 
 /* Form Cards */
 .form-card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 24px;
+    background: rgba(248, 250, 251, 0.97);
+    backdrop-filter: blur(8px);
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
     box-shadow: 
-        12px 12px 24px rgba(0, 0, 0, 0.12),
-        -12px -12px 24px rgba(255, 255, 255, 0.7),
-        inset 2px 2px 6px rgba(255, 255, 255, 0.9),
-        inset -2px -2px 6px rgba(0, 0, 0, 0.05);
+        8px 8px 18px rgba(44, 107, 127, 0.12),
+        -8px -8px 18px rgba(255, 255, 255, 0.6),
+        inset 1px 1px 3px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 3px rgba(44, 107, 127, 0.04);
+}
+
+.form-card h2 {
+    font-size: 24px;
+    color: var(--primary-deep);
+    margin-bottom: 6px;
+    font-weight: 800;
+}
+
+.form-card .subtitle {
+    color: var(--neutral-steel);
+    font-size: 13px;
+    margin-bottom: var(--space-lg);
+    font-weight: 500;
 }
 
 /* ========================================
-   LOADING SPINNER - CLAYMORPHISM
+   LOADING SPINNER - OCEAN THEME
    ======================================== */
 .spinner {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(145deg, #5BA5BA, #3D8899);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: var(--gradient-button);
     position: relative;
     animation: spin 1s linear infinite;
-    margin: 30px auto;
+    margin: var(--space-lg) auto;
     box-shadow: 
-        6px 6px 12px rgba(0, 0, 0, 0.2),
-        -6px -6px 12px rgba(255, 255, 255, 0.5);
+        4px 4px 10px rgba(44, 107, 127, 0.25),
+        -4px -4px 10px rgba(255, 255, 255, 0.5);
 }
 
 .spinner::before {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    background: #f5f7fa;
-    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: var(--neutral-snow);
+    border-radius: var(--radius-full);
     box-shadow: 
-        inset 3px 3px 6px rgba(0, 0, 0, 0.1),
-        inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+        inset 2px 2px 4px rgba(44, 107, 127, 0.1),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.9);
 }
 
 .spinner::after {
@@ -490,8 +532,8 @@ textarea::placeholder {
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(145deg, #5BA5BA, #3D8899);
-    border-radius: 50px 0 0 50px;
+    background: var(--gradient-button);
+    border-radius: 44px 0 0 44px;
 }
 
 @keyframes spin {
@@ -515,11 +557,11 @@ textarea::placeholder {
 }
 
 .mt-20 {
-    margin-top: 20px;
+    margin-top: var(--space-md);
 }
 
 .mt-30 {
-    margin-top: 30px;
+    margin-top: var(--space-lg);
 }
 
 .mb-10 {
@@ -527,11 +569,11 @@ textarea::placeholder {
 }
 
 .mb-20 {
-    margin-bottom: 20px;
+    margin-bottom: var(--space-md);
 }
 
 .mb-30 {
-    margin-bottom: 30px;
+    margin-bottom: var(--space-lg);
 }
 
 .hidden {
@@ -540,4 +582,38 @@ textarea::placeholder {
 
 .visible {
     display: block;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+@media (max-width: 768px) {
+    .form-card {
+        padding: var(--space-lg);
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .control-btn {
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-card {
+        padding: var(--space-md);
+    }
+    
+    .form-card h2 {
+        font-size: 20px;
+    }
+    
+    .alert {
+        padding: 12px 16px;
+        font-size: 12px;
+    }
 }

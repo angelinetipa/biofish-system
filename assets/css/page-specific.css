@@ -1,0 +1,262 @@
+/**
+ * BIO-FISH Page-Specific Styles
+ * Extracted from inline <style> tags in PHP files
+ */
+
+/* ========================================
+   MATERIALS ADD PAGE STYLES
+   ======================================== */
+.conditional-fields {
+    display: none;
+}
+
+.conditional-fields.active {
+    display: block;
+}
+
+/* ========================================
+   DASHBOARD METRICS STYLES
+   ======================================== */
+.metric-icon svg,
+.machine-status-card svg {
+    filter: drop-shadow(1px 2px 3px rgba(44, 107, 127, 0.12));
+}
+
+/* ========================================
+   TAB MONITORING STYLES
+   ======================================== */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.btn-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.idle-icon svg,
+.cleaning-icon svg {
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+    fill: var(--neutral-slate);
+}
+
+/* Tab button icons */
+.tab-btn svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 6px;
+    margin-top: -2px;
+    fill: currentColor;
+}
+
+/* ========================================
+   FEEDBACK TAB STYLES
+   ======================================== */
+.feedback-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+.feedback-details {
+    background: rgba(237, 242, 244, 0.8);
+    cursor: pointer;
+}
+
+.feedback-details td {
+    padding: var(--space-md);
+}
+
+/* ========================================
+   FEEDBACK ADD PAGE STYLES
+   ======================================== */
+.star-rating {
+    display: flex;
+    gap: 10px;
+    font-size: 32px;
+    margin: 10px 0;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    cursor: pointer;
+    color: var(--neutral-cloud);
+    transition: color var(--transition-normal);
+    margin: 0;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+    color: var(--accent-sand);
+    filter: drop-shadow(0 2px 4px rgba(255, 230, 109, 0.4));
+}
+
+.feedback-sections {
+    background: rgba(237, 242, 244, 0.6);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-md);
+    box-shadow: 
+        inset 2px 2px 6px rgba(44, 107, 127, 0.06),
+        inset -2px -2px 6px rgba(255, 255, 255, 0.9);
+}
+
+.feedback-sections h3 {
+    color: var(--primary-ocean);
+    font-size: 16px;
+    margin-bottom: var(--space-md);
+}
+
+/* ========================================
+   SELECTION BOXES (ADD BATCH PAGE)
+   ======================================== */
+.selection-box {
+    border: 2px solid var(--neutral-cloud);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 
+        inset 2px 2px 6px rgba(44, 107, 127, 0.06),
+        inset -2px -2px 6px rgba(255, 255, 255, 0.9);
+}
+
+.selection-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: 12px;
+    background: rgba(248, 250, 251, 0.9);
+    border-radius: var(--radius-md);
+    margin-bottom: 10px;
+    transition: var(--transition-normal);
+    box-shadow: 
+        2px 2px 6px rgba(44, 107, 127, 0.06),
+        -2px -2px 6px rgba(255, 255, 255, 0.8);
+}
+
+.selection-item:hover {
+    background: rgba(168, 224, 218, 0.2);
+    transform: translateX(2px);
+    box-shadow: 
+        3px 3px 8px rgba(44, 107, 127, 0.08),
+        -3px -3px 8px rgba(255, 255, 255, 0.9);
+}
+
+.selection-item:last-child {
+    margin-bottom: 0;
+}
+
+.selection-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-teal);
+}
+
+.selection-item label {
+    flex: 1;
+    margin: 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.selection-item label strong {
+    color: var(--primary-deep);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.selection-item label small {
+    color: var(--neutral-steel);
+    font-size: 12px;
+}
+
+.quantity-input {
+    width: 150px;
+    padding: var(--space-sm) 12px;
+    border: 1px solid var(--neutral-cloud);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    transition: var(--transition-normal);
+    box-shadow: 
+        inset 2px 2px 4px rgba(44, 107, 127, 0.06),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.9);
+}
+
+.quantity-input:focus {
+    border-color: var(--primary-teal);
+    outline: none;
+    box-shadow: 
+        0 0 0 3px rgba(78, 205, 196, 0.1),
+        inset 2px 2px 4px rgba(78, 205, 196, 0.08);
+}
+
+.quantity-input:disabled {
+    background: var(--neutral-mist);
+    cursor: not-allowed;
+}
+
+/* ========================================
+   BUTTON GROUPS
+   ======================================== */
+.btn-group {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+/* ========================================
+   MACHINE CONTROL SECTION
+   ======================================== */
+.machine-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+@media (max-width: 768px) {
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+    }
+    
+    .selection-item {
+        flex-wrap: wrap;
+    }
+    
+    .quantity-input {
+        width: 100%;
+        margin-top: var(--space-sm);
+    }
+}
+
+@media (max-width: 600px) {
+    .star-rating {
+        font-size: 28px;
+        gap: 8px;
+    }
+    
+    .feedback-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+}

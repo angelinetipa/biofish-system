@@ -49,48 +49,11 @@ $page_title = 'Submit Feedback';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo get_page_title($page_title); ?></title>
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/auth.css">
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/variables.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/main.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/components.css">
-    <style>
-        .star-rating {
-            display: flex;
-            gap: 10px;
-            font-size: 32px;
-            margin: 10px 0;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-        
-        .star-rating input[type="radio"] {
-            display: none;
-        }
-        
-        .star-rating label {
-            cursor: pointer;
-            color: #ddd;
-            transition: color 0.2s;
-            margin: 0;
-        }
-        
-        .star-rating label:hover,
-        .star-rating label:hover ~ label,
-        .star-rating input[type="radio"]:checked ~ label {
-            color: #ffc107;
-        }
-        
-        .feedback-sections {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        
-        .feedback-sections h3 {
-            color: #2C7873;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/page-specific.css">
 </head>
 <body>
     <?php include ROOT_PATH . '/includes/header.php'; ?>
