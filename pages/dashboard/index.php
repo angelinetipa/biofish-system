@@ -36,6 +36,7 @@ $running_batch = get_running_batch();
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/page-specific.css">
     <link rel="stylesheet" href="<?php echo CSS_URL; ?>/logout-modal.css">
     <script src="<?php echo JS_URL; ?>/logout-modal.js"></script>
+    <link rel="stylesheet" href="<?php echo CSS_URL; ?>/footer.css">
 </head>
 <body>
     <?php include ROOT_PATH . '/includes/header.php'; ?>
@@ -74,6 +75,7 @@ $running_batch = get_running_batch();
         </div>
     </div>
     
+    <?php include ROOT_PATH . '/includes/footer.php'; ?>
     <script src="<?php echo JS_URL; ?>/main.js"></script>
 </body>
 </html>
