@@ -252,7 +252,7 @@ $page_title = 'Add Inventory Item';
                 </div>
                 
                 <div class="btn-group" style="display: flex; gap: 15px; margin-top: 30px;">
-                    <button type="submit" class="btn btn-primary">✓ Add to Inventory</button>
+                    <button type="submit" class="btn btn-primary">Add to Inventory</button>
                     <a href="<?php echo BASE_URL; ?>/pages/dashboard/index.php" class="btn btn-secondary">Cancel</a>
                 </div>
             </form>

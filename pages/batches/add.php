@@ -149,7 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         
                         $conn->commit();
                         
-                        set_flash('success', '✓ Batch started successfully! Machine is now running.');
+                        set_flash('success', 'Batch started successfully! Machine is now running.');
                         redirect(BASE_URL . '/pages/dashboard/index.php');
                         
                     } catch (Exception $e) {

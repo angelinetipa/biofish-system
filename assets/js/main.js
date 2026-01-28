@@ -225,46 +225,37 @@ function confirmAction(message) {
 // Show notification
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
-    notification.className = `alert alert-${type}`;
+    notification.className = `alert alert-${type} notification`;
     notification.innerHTML = `<span>${message}</span>`;
-    notification.style.position = 'fixed';
-    notification.style.top = '20px';
-    notification.style.right = '20px';
-    notification.style.zIndex = '9999';
-    notification.style.minWidth = '300px';
-    notification.style.animation = 'slideIn 0.3s ease-out';
     
     document.body.appendChild(notification);
     
     setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease-out';
+        notification.classList.add('hiding');
         setTimeout(() => notification.remove(), 300);
     }, 3000);
 }
 
-// Add slide animations
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
+// Auto-convert flash messages to notifications on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Find any alert on the page
+    const alerts = document.querySelectorAll('.alert');
     
-    @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
+    alerts.forEach(alert => {
+        // Get the type (success, error, warning, info)
+        let type = 'info';
+        if (alert.classList.contains('alert-success')) type = 'success';
+        if (alert.classList.contains('alert-error')) type = 'error';
+        if (alert.classList.contains('alert-warning')) type = 'warning';
+        if (alert.classList.contains('alert-info')) type = 'info';
+        
+        // Get the message
+        const message = alert.textContent.trim();
+        
+        // Hide the original alert
+        alert.style.display = 'none';
+        
+        // Show as notification instead
+        showNotification(message, type);
+    });
+});

@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error = "Please provide at least one type of feedback (comment, bug report, or feature request).";
     } else {
         if (submit_feedback($batch_id, $rating, $user_name, $comments, $bug_report, $feature_request)) {
-            set_flash('success', '✓ Thank you! Your feedback has been submitted successfully.');
+            set_flash('success', 'Thank you! Your feedback has been submitted successfully.');
             redirect(BASE_URL . '/pages/dashboard/index.php');
         } else {
             $error = "Error submitting feedback. Please try again.";
